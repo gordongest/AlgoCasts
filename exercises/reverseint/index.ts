@@ -1,32 +1,32 @@
 /* solution 1 */
 
-const reverseInt = (n: number): number => {
-  let neg = false;
+// const reverseInt3 = (n: number): number => {
+//   let neg = false;
 
-  if (n < 0) {
-    neg = true;
-  }
+//   if (n < 0) {
+//     neg = true;
+//   }
 
-  const num = parseInt(Math.abs(n).toString().split('').reverse().join(''));
+//   const num = parseInt(Math.abs(n).toString().split('').reverse().join(''));
 
-  if (neg) {
-    return -num;
-  }
+//   if (neg) {
+//     return -num;
+//   }
 
-  return num;
-};
+//   return num;
+// };
 
 /* solution 2 */
 
-const reverseInt2 = (n: number): number => {
-  const reversed: string = n.toString().split('').reverse().join('');
+// const reverseInt2 = (n: number): number => {
+//   const reversed: string = n.toString().split('').reverse().join('');
 
-  return parseInt(reversed) * Math.sign(n);
-};
+//   return parseInt(reversed) * Math.sign(n);
+// };
 
 /* solution 3 - no strings/arrays - PREFERABLE */
 
-const reverseInt3 = (n: number): number => {
+const reverseInt = (n: number): number => {
   let reversedNum = 0;
 
   let num = Math.abs(n);
