@@ -38,12 +38,11 @@
 
 const reverseInt = (n) => {
   let reversedNum = 0;
+  let abs = Math.abs(n);
 
-  let num = Math.abs(n);
-
-  while (num >= 1) {
-    reversedNum = reversedNum * 10 + num % 10;
-    num = Math.floor(num / 10);
+  while (abs >= 1) {
+    reversedNum = reversedNum * 10 + abs % 10;
+    abs = Math.floor(abs / 10);
   }
 
   return reversedNum * Math.sign(n);
