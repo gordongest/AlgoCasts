@@ -10,4 +10,10 @@
 const palindrome = (str) =>
   str.split('').reduce((reverse, char) => char + reverse, '') === str;
 
+const palindrome2 = (str) => {
+  return str.split('').every((char, i) => {
+    return char === str[str.length - i - 1];
+  });
+};
+
 module.exports = palindrome;
