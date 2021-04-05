@@ -12,6 +12,42 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+const fizzBuzz = (n) => {
+  for (let i = 1; i < n + 1; i++) {
+    let output = '';
+
+    if (i % 3 === 0) { output+= 'fizz' };
+
+    if (i % 5 === 0) { output+= 'buzz' };
+
+    // if (i % 7 === 0) { output+= 'bazz' };
+
+    if (!output.length) { output = i };
+
+    console.log(output);
+  }
+}
+
+/* using a hash */
+
+const fizzBuzzHash = (n) => {
+  const fizzHash = {
+    3: 'fizz',
+    5: 'buzz',
+  }
+
+  for (let i = 1; i < n + 1; i++) {
+    let output = '';
+    for (let num in fizzHash) {
+      if (i % num === 0) {
+        output+= fizzHash[num];
+      }
+    }
+
+    if (!output.length) { output = i };
+
+    console.log(output);
+  }
+}
 
 module.exports = fizzBuzz;
