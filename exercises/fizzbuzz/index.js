@@ -13,17 +13,23 @@
 //   buzz
 
 const fizzBuzz = (n) => {
+  // start a loop from 1 to n inclusive
   for (let i = 1; i < n + 1; i++) {
+    // declare an empty output string
     let output = '';
 
+    // if i is divisible by 3, add fizz to the output string
     if (i % 3 === 0) { output+= 'fizz' };
 
+    // if divisible by 5, add buzz
     if (i % 5 === 0) { output+= 'buzz' };
 
     // if (i % 7 === 0) { output+= 'bazz' };
 
+    // if nothing has been added, set string to i
     if (!output.length) { output = i };
 
+    // log the string
     console.log(output);
   }
 }

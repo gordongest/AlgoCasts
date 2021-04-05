@@ -37,15 +37,19 @@
 /* solution 3 - no strings/arrays - PREFERABLE */
 
 const reverseInt = (n) => {
+  // declare a destination for reversed number
   let reversedNum = 0;
-  let abs = Math.abs(n);
 
-  while (abs >= 1) {
-    reversedNum = reversedNum * 10 + abs % 10;
-    abs = Math.floor(abs / 10);
+  // while n exists
+  while (n !== 0) {
+    // add a zero to reversedNum, and add the rightmost digit of n
+    reversedNum = reversedNum * 10 + n % 10;
+    // chop the rightmost digit off of n by dividing by 10 and rounding
+    n = parseInt(n / 10);
   }
 
-  return reversedNum * Math.sign(n);
+  // return the reversed number
+  return reversedNum;
 }
 
 module.exports = reverseInt;

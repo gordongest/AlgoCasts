@@ -9,8 +9,11 @@
 
 const capitalize = (str) => {
   return str
+    // split into an array on whitespace
     .split(' ')
+    // add a capital letter to the front of each word
     .map((word) => word[0].toUpperCase() + word.slice(1))
+    // join the words back together with spaces
     .join(' ');
 };
 

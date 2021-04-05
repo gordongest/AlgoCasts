@@ -21,12 +21,16 @@ const chunk2 = (array, size) => {
 };
 
 const chunk = (array, size) => {
+  // declare an empty array
   const results = [];
 
+  // while the input array still contains elements
   while (array.length) {
+    // splice those elements out and put them into a sub-array
     results.push(array.splice(0, size));
   }
 
+  // return the new array
   return results;
 };
 

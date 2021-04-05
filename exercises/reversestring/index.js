@@ -40,7 +40,7 @@ function reverse(str) {
     // 'reversed' initializes as the given empty string
     // add 'reversed' to back of every 'char'
     char + reversed
-  , '');
+    , '');
 
   /* solution 4 - .reverse() */
 

@@ -9,10 +9,12 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 const anagrams = (stringA, stringB) => {
+  // check whether the sorted strings are equal
   return sortString(stringA) === sortString(stringB);
 }
 
 const sortString = (str) => {
+  // return a version of the string with no punctuation or space, in lower case, sorted alphabetically
   return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
 }
 
