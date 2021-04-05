@@ -17,15 +17,11 @@
 //       '### '
 //       '####'
 
-function steps(n) {
-  // create an output string with n spaces
-  let output = ' '.repeat(n);
+const steps = (n) => {
   // start for loop
-  for (let i = 0; i < n; i++) {
-    // at each step, add a # to the string and remove the last space
-    output = '#' + output.slice(0, -1);
-    // log the string
-    console.log(output)
+  for (let i = 1; i <= n; i++) {
+    // at each step, log i #'s and (n - i) spaces
+    console.log('#'.repeat(i) + ' '.repeat(n - i));
   }
 }
 
